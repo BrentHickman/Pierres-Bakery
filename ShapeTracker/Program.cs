@@ -22,6 +22,7 @@ namespace ShapeTracker
       Triangle tri = new Triangle(length1, length2, length3);
       ConfirmOrEditTriangle(tri);
     }
+
     static void ConfirmOrEditTriangle(Triangle tri)
     {
       Console.WriteLine("Please confirm that you entered in your triangle correctly:");
@@ -29,7 +30,7 @@ namespace ShapeTracker
       Console.WriteLine($"Side 2 has a length of {tri.Side2}.");
       Console.WriteLine($"Side 3 has a length of {tri.GetSide3()}.");
       Console.WriteLine("Is that correct? Enter 'yes' to proceed, or 'no' to re-enter the triangle's sides");
-      string userInput = Console.ReadLine();
+      string userInput = Console.ReadLine();  
       if (userInput == "yes")
       {
         CheckTriangleType(tri);
@@ -49,6 +50,7 @@ namespace ShapeTracker
         ConfirmOrEditTriangle(tri);
       }
     }
+
     static void CheckTriangleType(Triangle tri)
     {
       string result = tri.CheckType();
@@ -67,6 +69,6 @@ namespace ShapeTracker
       {
         Console.WriteLine("Goodbye!");
       }
-    } 
+    }
   }
 }
