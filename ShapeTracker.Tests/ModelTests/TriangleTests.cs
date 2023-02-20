@@ -1,11 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShapeTracker.Models;
+using System.Collections.Generic;
+using System; 
 
 namespace ShapeTracker.Tests
 {
   [TestClass]
-  public class TriangleTests
+  public class TriangleTests : IDisposable
   {
+    public void Dispose()
+    {
+      Triangle.ClearAll();
+    }
   [TestMethod]
     public void TriangleConstructor_CreatesInstanceOfTriangle_Triangle()
     {
@@ -80,7 +86,7 @@ namespace ShapeTracker.Tests
       // Assert
       Assert.AreEqual(newLength3, newTriangle.GetSide3());
     }
-    [TestMethod]
+  [TestMethod]
     public void CheckType_DeterminesWhenNotATriangle_String()
     {
       // Arrange
@@ -90,7 +96,7 @@ namespace ShapeTracker.Tests
       // Assert
       Assert.AreEqual("not a triangle", triType);
     }
-    [TestMethod]
+  [TestMethod]
     public void CheckType_DeterminesWhenScalene_String()
     {
       //Arrange
@@ -100,7 +106,7 @@ namespace ShapeTracker.Tests
       //Assert
       Assert.AreEqual("scalene triangle", triType);
     }
-    [TestMethod]
+  [TestMethod]
     public void CheckType_DeterminesWhenIsosceles_String()
     {
       // Arrange
@@ -110,7 +116,7 @@ namespace ShapeTracker.Tests
       // Assert
       Assert.AreEqual("isosceles triangle", triType);
     }
-    [TestMethod]
+  [TestMethod]
     public void CheckType_DeterminesWhenEquilateral_String()
     {
       //Arrange
@@ -119,6 +125,19 @@ namespace ShapeTracker.Tests
       string triType = equiTri.CheckType();
       //Assert
       Assert.AreEqual("equilateral triangle", triType);
+    }
+  [TestMethod]
+    public void GetAll_ReturnsAllTriangleInstances_List()
+    {
+      // Arrange
+      Triangle tri1 = new Triangle(2, 2, 9);
+      Triangle tri2 = new Triangle(21, 3, 9);
+      Triangle tri3 = new Triangle(1, 3, 9);
+      List<Triangle> expected = new List<Triangle> { tri1, tri2, tri3 };
+      // Act
+      List<Triangle> actualResult = Triangle.GetAll();
+      // Assert
+      CollectionAssert.AreEqual(expected, actualResult);
     }
   }
 }
