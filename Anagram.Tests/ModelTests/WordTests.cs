@@ -12,5 +12,14 @@ namespace Anagram.Tests
       Word newWord = new Word("bread");
       Assert.AreEqual(typeof(Word), newWord.GetType());
     }
+
+    [TestMethod]
+    public void WordConstructor_ReturnsInputWord_Word()
+    {
+      string inputWord = "bread";
+      Word newWord = new Word(inputWord);
+      string result = newWord.InputWord;
+      Assert.AreEqual(inputWord, result);
+    }
   }
 }
