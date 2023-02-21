@@ -33,20 +33,21 @@ namespace Anagram.Tests
     public void WordConstructor_WritesArrayOfCharactersToConsole_checkWord()
     {
       string newInput = "bread";
-      char[] checkArr = {'b', 'r', 'e', 'a', 'd'};
+      char[] checkArr = { 'b', 'r', 'e', 'a', 'd' };
       Word newWord = new Word(newInput);
       char[] newWordArr = newWord.checkWords(newWord.InputWord);
       Assert.AreEqual(newWordArr[0], checkArr[0]);
     }
 
     [TestMethod]
-    public void WordConstructor_CreatesInstanceOfWordinWordList_Word()
+    public void WordConstructor_WritesArrayOfCharactersAndAddsToCharList_checkWord()
     {
-      Word newInput1 = new Word("bread");
-      Word newInput2 = new Word("fish");
-      List<Word> expected = new List<Word> { newInput1, newInput2 };
-      List<Word> result = Word.GetAll();
-      CollectionAssert.AreEqual(expected, result);    
+      string newInput = "bread";
+            Word newWord = new Word(newInput);
+            newWord.checkWords(newWord.InputWord);
+            Word.GetAll();
+            Assert.AreEqual(0, 1);
     }
+
   }
 }
