@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Anagram.Models;
+using System.Collections.Generic;
+using System;
 
 namespace Anagram.Tests
 {
   [TestClass]
-  public class WordTests
+  public class WordTests : IDisposable
   {
+    public void Dispose()
+    {
+      Word.ClearAll();
+    }
+
     [TestMethod]
     public void WordConstructor_CreatesInstanceOfWord_Word()
     {
@@ -30,6 +37,16 @@ namespace Anagram.Tests
       Word newWord = new Word(newInput);
       char[] newWordArr = newWord.checkWords(newWord.InputWord);
       Assert.AreEqual(newWordArr[0], checkArr[0]);
+    }
+
+    [TestMethod]
+    public void WordConstructor_CreatesInstanceOfWordinWordList_Word()
+    {
+      Word newInput1 = new Word("bread");
+      Word newInput2 = new Word("fish");
+      List<Word> expected = new List<Word> { newInput1, newInput2 };
+      List<Word> result = Word.GetAll();
+      CollectionAssert.AreEqual(expected, result);    
     }
   }
 }
