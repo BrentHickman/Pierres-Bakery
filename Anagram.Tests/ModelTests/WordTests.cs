@@ -21,5 +21,15 @@ namespace Anagram.Tests
       string result = newWord.InputWord;
       Assert.AreEqual(newInput, result);
     }
+
+    [TestMethod]
+    public void WordConstructor_WritesArrayOfCharactersToConsole_checkWord()
+    {
+      string newInput = "bread";
+      char[] checkArr = {'b', 'r', 'e', 'a', 'd'};
+      Word newWord = new Word(newInput);
+      char[] newWordArr = newWord.checkWords(newWord.InputWord);
+      Assert.AreEqual(newWordArr[0], checkArr[0]);
+    }
   }
 }
