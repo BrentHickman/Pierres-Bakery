@@ -16,10 +16,10 @@ namespace Anagram.Tests
     [TestMethod]
     public void WordConstructor_ReturnsInputWord_Word()
     {
-      string inputWord = "bread";
-      Word newWord = new Word(inputWord);
+      string newInput = "bread";
+      Word newWord = new Word(newInput);
       string result = newWord.InputWord;
-      Assert.AreEqual(inputWord, result);
+      Assert.AreEqual(newInput, result);
     }
   }
 }
