@@ -23,11 +23,19 @@ namespace Anagram.Models
       for (int i = 0; i < s.Length; i++)
       {
         ch[i] = s[i];
-        dataList.Add(ch[i]);
-        Console.WriteLine(dataList[i]); 
+        // dataList.Add(ch[i]);
+        // Console.WriteLine(dataList[i]); 
       }
-      // sort array
-      //foreach for the array to add into charList
+      Console.WriteLine(ch);
+      Array.Sort(ch);
+      Console.WriteLine(ch);
+      foreach (char c in ch)
+      {
+        dataList.Add(c);
+
+      }
+      Console.WriteLine(dataList[1]);
+
       return ch;
     }
     public static List<Char> GetAll()
