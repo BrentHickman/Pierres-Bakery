@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
 
-namespace ShapeTracker.Tests
+namespace Bakery.Tests
 {
   [TestClass]
   public class BreadTests
@@ -43,4 +43,3 @@ namespace ShapeTracker.Tests
     }
   }
 }
-//
