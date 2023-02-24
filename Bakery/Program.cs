@@ -19,11 +19,12 @@ class Program
       } 
     else 
       {
-        Console.WriteLine("Have a great day!");
+        Console.WriteLine("Come back soon!");
       }
   }
   static void BeginOrder()
   {
+    Console.Clear();
     Console.WriteLine("What would you like to order?");
     Console.WriteLine("'Bread' or 'Pastry'");
     string stringOrderType = Console.ReadLine();
@@ -44,11 +45,17 @@ class Program
   
   static void StartBreadOrder()
   {
-
+    Console.WriteLine("Okay, how many loaves of bread would you like to order?");
+    string stringBreadOrderQty = Console.ReadLine();
+    int breadOrderQty = int.Parse(stringBreadOrderQty);
+    Bread breadOrder = new Bread(breadOrderQty);
   }
     static void StartPastryOrder()
   {
-
+    Console.WriteLine("Okay, how many pastries would you like to order?");
+    string stringPastryOrderQty = Console.ReadLine();
+    int PastryOrderQty = int.Parse(stringPastryOrderQty);
+    Pastry pastryOrder = new Pastry(PastryOrderQty);
   }
 
 }
