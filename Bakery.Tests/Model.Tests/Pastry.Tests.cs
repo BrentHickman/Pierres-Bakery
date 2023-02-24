@@ -30,16 +30,16 @@ namespace Bakery.Tests
       int result = newPastryOrder.PastryOrderPrice;
       Assert.AreEqual(testPastryOrderPrice, result);
     }
-  //   [TestMethod]
-  //   public void GetBreadQty_CalculatesBreadOrderPriceBOGO_Int()
-  //   {
-  //     int breadOrder1Qty = 2;
-  //     int breadOrder2Qty = 3;
-  //     Bread newBreadOrder1 = new Bread(breadOrder1Qty);
-  //     int result1 = newBreadOrder1.BreadOrderPrice;
-  //     Bread newBreadOrder2 = new Bread(breadOrder2Qty);
-  //     int result2 = newBreadOrder2.BreadOrderPrice;
-  //     Assert.AreEqual(result1, result2);
-  //   }
+    [TestMethod]
+    public void GetPastryQty_CalculatesPastryOrderPriceBOGO_Int()
+    {
+      int pastryOrder1Qty = 3;
+      int pastryOrder2Qty = 4;
+      Pastry newPastryOrder1 = new Pastry(pastryOrder1Qty);
+      int result1 = newPastryOrder1.PastryOrderPrice;
+      Pastry newPastryOrder2 = new Pastry(pastryOrder2Qty);
+      int result2 = newPastryOrder2.PastryOrderPrice;
+      Assert.AreEqual(result1, result2);
+    }
   }
 }
