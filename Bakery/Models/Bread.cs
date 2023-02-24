@@ -6,12 +6,12 @@ public class Bread
 {
   public int BreadQty { get; set; }
   public int BreadOrderPrice { get; set; }
-  private int _loafprice;
+  private int _loafPrice;
   public Bread(int breadQtyOrdered)
   {
-    _loafprice = 5;
+    _loafPrice = 5;
     BreadQty = breadQtyOrdered;
-    BreadOrderPrice = (breadQtyOrdered - (breadQtyOrdered/3))*_loafprice;
+    BreadOrderPrice = (breadQtyOrdered - (breadQtyOrdered/3))*_loafPrice;
   }
 
 
