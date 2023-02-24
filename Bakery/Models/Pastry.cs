@@ -6,13 +6,15 @@ public class Pastry
 {
   public int PastryQty { get; set; }
   public int PastryOrderPrice { get; set; }
-  private int _pastryPrice;
-
     public Pastry(int pastryQtyOrdered)
   {
-    _pastryPrice = 2;
     PastryQty = pastryQtyOrdered;
-    PastryOrderPrice = (pastryQtyOrdered - (pastryQtyOrdered/4))*_pastryPrice;
-
+    PastryOrderPrice = CalcBreadOrderPrice(pastryQtyOrdered);
+  }
+  public int CalcBreadOrderPrice(int pastryQtyOrdered)
+  {
+    int pastryPrice = 2;
+    this.PastryOrderPrice = (pastryQtyOrdered - (pastryQtyOrdered/4))*pastryPrice;
+    return PastryOrderPrice;
   }
 }
