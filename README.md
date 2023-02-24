@@ -15,13 +15,13 @@
 ## Setup/Installation Requirements
 
 * Open a terminal window and clone this repository by entering into the command line:
-> git clone https://github.com/BrentHickman/pierres-bakery.git
+> git clone https://github.com/BrentHickman/Pierres-Bakery.git
 * In the terminal, navigate to the console application with the command:
 > cd Pierres-Bakery/Bakery
 * To launch the application enter the following lines into the command line:
-> dotnet restore
-> dotnet build
-> dotnet run
+* > dotnet restore
+* > dotnet build
+* > dotnet run
 
 ## Known Bugs
 
