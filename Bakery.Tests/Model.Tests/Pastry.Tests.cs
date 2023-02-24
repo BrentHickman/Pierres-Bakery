@@ -21,15 +21,15 @@ namespace Bakery.Tests
       int result = newPastryOrder.PastryQty;
       Assert.AreEqual(pastryOrderQty, result);
     }
-    // [TestMethod]
-    // public void GetBreadQty_CalculatesBreadOrderPrice_Int()
-    // {
-    //   int breadOrderQty = 1;
-    //   int testBreadOrderPrice = 5;
-    //   Bread newBreadOrder = new Bread(breadOrderQty);
-    //   int result = newBreadOrder.BreadOrderPrice;
-    //   Assert.AreEqual(testBreadOrderPrice, result);
-    // }
+    [TestMethod]
+    public void GetPastryQty_CalculatesPastryOrderPrice_Int()
+    {
+      int pastryOrderQty = 1;
+      int testPastryOrderPrice = 2;
+      Pastry newPastryOrder = new Pastry(pastryOrderQty);
+      int result = newPastryOrder.PastryOrderPrice;
+      Assert.AreEqual(testPastryOrderPrice, result);
+    }
   //   [TestMethod]
   //   public void GetBreadQty_CalculatesBreadOrderPriceBOGO_Int()
   //   {
