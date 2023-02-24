@@ -19,9 +19,11 @@
 * In the terminal, navigate to the console application with the command:
 > cd Pierres-Bakery/Bakery
 * To launch the application enter the following lines into the command line:
-* > dotnet restore
-* > dotnet build
-* > dotnet run
+> dotnet restore
+* then:
+> dotnet build
+* and finally:
+> dotnet run
 
 ## Known Bugs
 
