@@ -49,6 +49,35 @@ class Program
     string stringBreadOrderQty = Console.ReadLine();
     int breadOrderQty = int.Parse(stringBreadOrderQty);
     Bread breadOrder = new Bread(breadOrderQty);
+    ConfirmOrEditBreadOrder(breadOrder);
+  }
+
+  static void ConfirmOrEditBreadOrder(Bread breadOrder)
+  {
+    Console.WriteLine("Does your order look correct?");
+    Console.WriteLine($"Order: {breadOrder.BreadQty} loaves of bread for ${breadOrder.BreadOrderPrice}.");
+    Console.WriteLine("Is that correct? Enter 'yes' to proceed, or 'no' to re-enter your bread order");
+    string breadOrderCheckInput = Console.ReadLine();
+    if (breadOrderCheckInput == "yes" || breadOrderCheckInput == "YES" || breadOrderCheckInput == "Yes" || breadOrderCheckInput == "y" || breadOrderCheckInput == "Y")
+    {
+      Console.WriteLine("Order Confirmed!");
+      Console.WriteLine("Would you like to order some pastries too?");
+      string addPastryToBreadOrder = Console.ReadLine();
+      if (addPastryToBreadOrder == "yes" || addPastryToBreadOrder == "YES" || addPastryToBreadOrder == "Yes" || addPastryToBreadOrder == "y" || addPastryToBreadOrder == "Y")
+      {
+        StartPastryOrder();
+      }
+      else
+      {
+        Console.WriteLine("Order Placed!");
+        Console.WriteLine("It will be ready shortly");
+        Console.WriteLine("Thank you and have a great day!");
+      }
+    }
+    else 
+    {
+      StartBreadOrder();
+    }
   }
     static void StartPastryOrder()
   {
@@ -58,4 +87,8 @@ class Program
     Pastry pastryOrder = new Pastry(PastryOrderQty);
   }
 
+  static void Checkout()
+  {
+
+  }
 }
