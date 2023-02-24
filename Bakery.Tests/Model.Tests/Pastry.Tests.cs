@@ -9,7 +9,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastry = new Pastry();
+      Pastry newPastry = new Pastry(4);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
@@ -17,7 +17,7 @@ namespace Bakery.Tests
     public void GetPastryQty_ReturnsPastryQty_Int()
     {
       int pastryOrderQty = 4;
-      Bread newPastryOrder = new Bread(pastryOrderQty);
+      Pastry newPastryOrder = new Pastry(pastryOrderQty);
       int result = newPastryOrder.PastryQty;
       Assert.AreEqual(pastryOrderQty, result);
     }
