@@ -21,7 +21,7 @@
 * To launch the application enter the following lines into the command line:
 > dotnet restore
 > dotnet build
-> dotnet start
+> dotnet run
 
 ## Known Bugs
 
