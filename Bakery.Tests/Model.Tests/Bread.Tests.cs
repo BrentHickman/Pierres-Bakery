@@ -30,5 +30,16 @@ namespace ShapeTracker.Tests
       int result = newBreadOrder.BreadOrderPrice;
       Assert.AreEqual(testBreadOrderPrice, result);
     }
+    [TestMethod]
+    public void GetBreadQty_CalculatesBreadOrderPriceBOGO_Int()
+    {
+      int breadOrder1Qty = 2;
+      int breadOrder2Qty = 3;
+      Bread newBreadOrder1 = new Bread(breadOrder1Qty);
+      int result1 = newBreadOrder1.BreadOrderPrice;
+      Bread newBreadOrder2 = new Bread(breadOrder2Qty);
+      int result2 = newBreadOrder2.BreadOrderPrice;
+      Assert.AreEqual(result1, result2);
+    }
   }
 }
