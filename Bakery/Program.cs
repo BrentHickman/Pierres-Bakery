@@ -44,7 +44,8 @@ class Program
   
   static void StartBreadOrder()
   {
-    Console.WriteLine("Okay, how many loaves of bread would you like to order?");
+    Console.WriteLine("Awesome, loaves are $5 or buy 2 get one free!");
+    Console.WriteLine("How many loaves of bread would you like to order?");
     string stringBreadOrderQty = Console.ReadLine();
     int breadOrderQty = int.Parse(stringBreadOrderQty);
     Bread breadOrder = new Bread(breadOrderQty);
@@ -80,7 +81,8 @@ class Program
   }
     static void StartPastryOrder()
   {
-    Console.WriteLine("Okay, how many pastries would you like to order?");
+    Console.WriteLine("Great, pastries are $2 or buy 3 get one free!");
+    Console.WriteLine("How many pastries would you like to order?");
     string stringPastryOrderQty = Console.ReadLine();
     int PastryOrderQty = int.Parse(stringPastryOrderQty);
     Pastry pastryOrder = new Pastry(PastryOrderQty);
@@ -112,10 +114,5 @@ static void ConfirmOrEditPastryOrder(Pastry pastryOrder)
     {
       StartPastryOrder();
     }
-  }
-
-  static void Checkout()
-  {
-
   }
 }
